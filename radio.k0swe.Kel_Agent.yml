@@ -19,11 +19,21 @@ modules:
         tag: v1.4.2
         commit: b65e62901fc1c0d968042419e74789f6af455eb9
         dest: vendor/github.com/gorilla/websocket/
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\\d.]+)$
+          version-scheme: semantic
+
       - type: git
         url: https://github.com/k0swe/wsjtx-go.git
         tag: v2.1.0
         commit: cbb8d0e78f4870291f606327a3885928f121751a
         dest: vendor/github.com/k0swe/wsjtx-go/v2/
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\\d.]+)$
+          version-scheme: semantic
+
       - type: git
         url: https://github.com/leemcloughlin/jdn.git
         commit: 6f88db6a6bf2176674100d1a1c692596fcf6e2ba
@@ -33,6 +43,11 @@ modules:
         url: https://github.com/k0swe/kel-agent.git
         tag: v0.3.5
         commit: edcd7dfd4e60153c1972e148f8912478022407d8
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\\d.]+)$
+          version-scheme: semantic
+
     buildsystem: simple
     build-commands:
       - cp assets/modules.txt vendor/
@@ -41,3 +56,4 @@ modules:
       - install -Dm644 assets/radio.k0swe.Kel_Agent.svg /app/share/icons/hicolor/scalable/apps/radio.k0swe.Kel_Agent.svg
       - install -Dm644 assets/radio.k0swe.Kel_Agent.metainfo.xml /app/share/metainfo/radio.k0swe.Kel_Agent.metainfo.xml
       - install -Dm644 assets/radio.k0swe.Kel_Agent.desktop /app/share/applications/radio.k0swe.Kel_Agent.desktop
+
