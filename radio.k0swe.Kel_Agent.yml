@@ -21,7 +21,7 @@ modules:
         dest: vendor/github.com/gorilla/websocket/
         x-checker-data:
           type: git
-          tag-pattern: ^v([\\d.]+)$
+          tag-pattern: ^v([\d.]+)$
           version-scheme: semantic
 
       - type: git
@@ -31,7 +31,7 @@ modules:
         dest: vendor/github.com/k0swe/wsjtx-go/v2/
         x-checker-data:
           type: git
-          tag-pattern: ^v([\\d.]+)$
+          tag-pattern: ^v([\d.]+)$
           version-scheme: semantic
 
       - type: git
@@ -44,9 +44,11 @@ modules:
         tag: v0.3.5
         commit: edcd7dfd4e60153c1972e148f8912478022407d8
         x-checker-data:
-          type: git
-          tag-pattern: ^v([\\d.]+)$
-          version-scheme: semantic
+          type: json
+          url: https://api.github.com/repos/k0swe/kel-agent/releases/latest
+          tag-query: .tag_name
+          version-query: $tag | sub("^v"; "")
+          timestamp-query: .published_at
 
     buildsystem: simple
     build-commands:
