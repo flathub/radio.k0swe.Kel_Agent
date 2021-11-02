@@ -7,7 +7,7 @@ sdk-extensions:
 build-options:
   append-path: /usr/lib/sdk/golang/bin
   env:
-    - 'LDFLAGS='
+    - LDFLAGS=
 command: kel-agent
 finish-args:
   - --share=network
@@ -41,8 +41,8 @@ modules:
 
       - type: git
         url: https://github.com/k0swe/kel-agent.git
-        tag: v0.3.5
-        commit: edcd7dfd4e60153c1972e148f8912478022407d8
+        tag: v0.4.2
+        commit: 0b38ffa426308cb1125a9acb0d2caf354c075754
         x-checker-data:
           type: json
           url: https://api.github.com/repos/k0swe/kel-agent/releases/latest
