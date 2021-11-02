@@ -56,8 +56,8 @@ modules:
 
       - type: git
         url: https://github.com/rs/zerolog.git
-        tag: v1.25.0
-        commit: 65adfd88ecb983005c9f735d207e11d63216ca00
+        tag: v1.26.0
+        commit: 6973188a7402be93e3b27e318eac70d67cbbf1bd
         dest: vendor/github.com/rs/zerolog/
         x-checker-data:
           type: git
