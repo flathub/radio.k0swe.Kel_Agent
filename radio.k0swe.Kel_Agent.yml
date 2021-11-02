@@ -15,10 +15,30 @@ modules:
   - name: kel-agent
     sources:
       - type: git
+        url: https://github.com/adrg/xdg.git
+        tag: v0.4.0
+        commit: 4ec40e24f0cf1039f93c773f2984decdea9719b5
+        dest: vendor/github.com/adrg/xdg/
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+)$
+          version-scheme: semantic
+
+      - type: git
         url: https://github.com/gorilla/websocket.git
         tag: v1.4.2
         commit: b65e62901fc1c0d968042419e74789f6af455eb9
         dest: vendor/github.com/gorilla/websocket/
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+)$
+          version-scheme: semantic
+
+      - type: git
+        url: https://github.com/imdario/mergo.git
+        tag: v0.3.12
+        commit: 29fb3d3bdc5512887f1dc9aedde6a0fed407fa8f
+        dest: vendor/github.com/imdario/mergo/
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -35,9 +55,29 @@ modules:
           version-scheme: semantic
 
       - type: git
+        url: https://github.com/rs/zerolog.git
+        tag: v1.25.0
+        commit: 65adfd88ecb983005c9f735d207e11d63216ca00
+        dest: vendor/github.com/rs/zerolog/
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+)$
+          version-scheme: semantic
+
+      - type: git
         url: https://github.com/leemcloughlin/jdn.git
         commit: 6f88db6a6bf2176674100d1a1c692596fcf6e2ba
         dest: vendor/github.com/leemcloughlin/jdn/
+
+      - type: git
+        url: https://github.com/go-yaml/yaml.git
+        tag: v2.4.0
+        commit: 7649d4548cb53a614db133b2a8ac1f31859dda8c
+        dest: vendor/gopkg.in/yaml.v2/
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+)$
+          version-scheme: semantic
 
       - type: git
         url: https://github.com/k0swe/kel-agent.git
@@ -58,4 +98,3 @@ modules:
       - install -Dm644 assets/radio.k0swe.Kel_Agent.svg /app/share/icons/hicolor/scalable/apps/radio.k0swe.Kel_Agent.svg
       - install -Dm644 assets/radio.k0swe.Kel_Agent.metainfo.xml /app/share/metainfo/radio.k0swe.Kel_Agent.metainfo.xml
       - install -Dm644 assets/radio.k0swe.Kel_Agent.desktop /app/share/applications/radio.k0swe.Kel_Agent.desktop
-
