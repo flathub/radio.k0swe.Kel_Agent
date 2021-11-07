@@ -46,8 +46,8 @@ modules:
 
       - type: git
         url: https://github.com/k0swe/wsjtx-go.git
-        tag: v2.1.0
-        commit: cbb8d0e78f4870291f606327a3885928f121751a
+        tag: v2.1.1
+        commit: 3791730deae782cf57d89cd7890b45f1ee41f8a2
         dest: vendor/github.com/k0swe/wsjtx-go/v2/
         x-checker-data:
           type: git
@@ -56,8 +56,8 @@ modules:
 
       - type: git
         url: https://github.com/rs/zerolog.git
-        tag: v1.25.0
-        commit: 65adfd88ecb983005c9f735d207e11d63216ca00
+        tag: v1.26.0
+        commit: 6973188a7402be93e3b27e318eac70d67cbbf1bd
         dest: vendor/github.com/rs/zerolog/
         x-checker-data:
           type: git
