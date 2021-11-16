@@ -46,9 +46,9 @@ modules:
 
       - type: git
         url: https://github.com/k0swe/wsjtx-go.git
-        tag: v2.1.1
-        commit: 3791730deae782cf57d89cd7890b45f1ee41f8a2
-        dest: vendor/github.com/k0swe/wsjtx-go/v2/
+        tag: v3.0.0
+        commit: 17dbc1088898b85360c16fcb7711e182db13afce
+        dest: vendor/github.com/k0swe/wsjtx-go/v3/
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -81,8 +81,8 @@ modules:
 
       - type: git
         url: https://github.com/k0swe/kel-agent.git
-        tag: v0.4.2
-        commit: 0b38ffa426308cb1125a9acb0d2caf354c075754
+        tag: v0.4.3
+        commit: 6450bf748ee6c4c95232ae2ec3efda96d0887fff
         x-checker-data:
           type: json
           url: https://api.github.com/repos/k0swe/kel-agent/releases/latest
