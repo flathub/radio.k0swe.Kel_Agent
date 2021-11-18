@@ -34,8 +34,8 @@ modules:
 
       - type: git
         url: https://github.com/k0swe/wsjtx-go.git
-        tag: v3.0.0
-        commit: 17dbc1088898b85360c16fcb7711e182db13afce
+        tag: v3.1.0
+        commit: eb28ccdd1c54d16c806b1e7c2430e242fe14c874
         dest: vendor/github.com/k0swe/wsjtx-go/v3/
 
       - type: git
