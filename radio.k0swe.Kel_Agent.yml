@@ -17,32 +17,27 @@ modules:
       - type: git
         url: https://github.com/adrg/xdg.git
         tag: v0.4.0
-        commit: 4ec40e24f0cf1039f93c773f2984decdea9719b5
         dest: vendor/github.com/adrg/xdg/
 
       - type: git
+        url: https://github.com/davecgh/go-spew.git
+        tag: v1.1.0
+        dest: vendor/github.com/davecgh/go-spew/
+
+      - type: git
         url: https://github.com/gorilla/websocket.git
-        tag: v1.4.2
-        commit: b65e62901fc1c0d968042419e74789f6af455eb9
+        tag: v1.5.0
         dest: vendor/github.com/gorilla/websocket/
 
       - type: git
         url: https://github.com/imdario/mergo.git
-        tag: v0.3.12
-        commit: 29fb3d3bdc5512887f1dc9aedde6a0fed407fa8f
+        tag: v0.3.13
         dest: vendor/github.com/imdario/mergo/
 
       - type: git
         url: https://github.com/k0swe/wsjtx-go.git
-        tag: v3.1.0
-        commit: eb28ccdd1c54d16c806b1e7c2430e242fe14c874
-        dest: vendor/github.com/k0swe/wsjtx-go/v3/
-
-      - type: git
-        url: https://github.com/rs/zerolog.git
-        tag: v1.26.0
-        commit: 6973188a7402be93e3b27e318eac70d67cbbf1bd
-        dest: vendor/github.com/rs/zerolog/
+        tag: v4.0.1
+        dest: vendor/github.com/k0swe/wsjtx-go/v4/
 
       - type: git
         url: https://github.com/leemcloughlin/jdn.git
@@ -50,15 +45,49 @@ modules:
         dest: vendor/github.com/leemcloughlin/jdn/
 
       - type: git
+        url: https://github.com/mattn/go-colorable.git
+        tag: v0.1.12
+        dest: vendor/github.com/mattn/go-colorable/
+
+      - type: git
+        url: https://github.com/mattn/go-isatty.git
+        tag: v0.0.14
+        dest: vendor/github.com/mattn/go-isatty/
+
+      - type: git
+        url: https://github.com/mazznoer/csscolorparser.git
+        tag: v0.1.2
+        dest: vendor/github.com/mazznoer/csscolorparser/
+
+      - type: git
+        url: https://github.com/pmezard/go-difflib.git
+        tag: v1.0.0
+        dest: vendor/github.com/pmezard/go-difflib/
+
+      - type: git
+        url: https://github.com/rs/zerolog.git
+        tag: v1.27.0
+        dest: vendor/github.com/rs/zerolog/
+
+      - type: git
+        url: https://github.com/stretchr/testify.git
+        tag: v1.7.2
+        dest: vendor/github.com/stretchr/testify/
+
+      - type: git
+        url: https://github.com/golang/sys.git
+        commit: 9f5ed59c137dcb0852024edd2e71af63c2d67707
+        dest: vendor/golang.org/x/sys/
+
+      - type: git
         url: https://github.com/go-yaml/yaml.git
-        tag: v2.4.0
-        commit: 7649d4548cb53a614db133b2a8ac1f31859dda8c
-        dest: vendor/gopkg.in/yaml.v2/
+        tag: v3.0.1
+        dest: vendor/gopkg.in/yaml.v3/
 
       - type: git
         url: https://github.com/k0swe/kel-agent.git
-        tag: v0.4.4
-        commit: b4162178ff32729cb17b54a5decfb0c65493cb63
+        tag: v0.4.6
+        commit: ffda29af4045e543e55b25564d265af37f92fc41
         x-checker-data:
           type: json
           url: https://api.github.com/repos/k0swe/kel-agent/releases/latest
