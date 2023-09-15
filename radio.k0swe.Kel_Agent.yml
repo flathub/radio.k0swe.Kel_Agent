@@ -95,6 +95,9 @@ modules:
           version-query: $tag | sub("^v"; "")
           timestamp-query: .published_at
 
+      - type: patch
+        path: appdata.patch
+
     buildsystem: simple
     build-commands:
       - cp assets/modules.txt vendor/
