@@ -1,8 +1,16 @@
 diff --git a/assets/radio.k0swe.Kel_Agent.metainfo.xml b/assets/radio.k0swe.Kel_Agent.metainfo.xml
-index 60507c6..9b47e43 100644
+index 60507c6..5f6e622 100644
 --- a/assets/radio.k0swe.Kel_Agent.metainfo.xml
 +++ b/assets/radio.k0swe.Kel_Agent.metainfo.xml
-@@ -8,7 +8,7 @@
+@@ -3,12 +3,15 @@
+     <id>radio.k0swe.Kel_Agent</id>
+     <metadata_license>CC0-1.0</metadata_license>
+     <project_license>Apache-2.0</project_license>
++    <developer id="io.github.k0swe">
++        <name>Chris Keller</name>
++    </developer>
+     <name>kel-agent</name>
+     <summary>An amateur radio web agent</summary>
      <description>
          <p>
              An agent program for translating between various amateur radio installed programs and
