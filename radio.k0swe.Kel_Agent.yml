@@ -150,8 +150,12 @@ modules:
           version-query: $tag | sub("^v"; "")
           timestamp-query: .published_at
 
+      - type: file
+        path: metainfo-developer.patch
+
     buildsystem: simple
     build-commands:
+      - patch -p1 -i metainfo-developer.patch
       - cp assets/modules.txt vendor/
       - >-
         sed -i '/AX_PROG_LUA/d;/AX_LUA_HEADERS/d;/AX_LUA_LIBS/d'

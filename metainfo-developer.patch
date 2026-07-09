@@ -1,0 +1,14 @@
+diff --git a/assets/radio.k0swe.Kel_Agent.metainfo.xml b/assets/radio.k0swe.Kel_Agent.metainfo.xml
+index f475f80..f65e699 100644
+--- a/assets/radio.k0swe.Kel_Agent.metainfo.xml
++++ b/assets/radio.k0swe.Kel_Agent.metainfo.xml
+@@ -4,6 +4,9 @@
+     <metadata_license>CC0-1.0</metadata_license>
+     <project_license>Apache-2.0</project_license>
+     <name>kel-agent</name>
++    <developer id="io.github.k0swe">
++        <name>Chris Keller, K0SWE</name>
++    </developer>
+     <summary>An amateur radio web agent</summary>
+     <description>
+         <p>
