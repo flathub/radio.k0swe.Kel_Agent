@@ -1,6 +1,6 @@
 app-id: radio.k0swe.Kel_Agent
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.golang
@@ -11,32 +11,56 @@ build-options:
 command: kel-agent
 finish-args:
   - --share=network
+  - --device=all
 modules:
   - name: kel-agent
     sources:
       - type: git
+        url: https://github.com/imdario/mergo.git
+        tag: v1.0.2
+        commit: 7b33b2b01026fbbbbfcfbb1ee2c9c0a5e0c9a9f7
+        dest: vendor/dario.cat/mergo/
+
+      - type: git
         url: https://github.com/adrg/xdg.git
-        tag: v0.4.0
+        tag: v0.5.3
+        commit: aa865a51a1b35fd06925fd6b8604991e79e3167e
         dest: vendor/github.com/adrg/xdg/
 
       - type: git
+        url: https://github.com/bahlo/generic-list-go.git
+        tag: v0.2.0
+        commit: 89fb9b4cdfd4b5295651f72e9f892f1595b4d6c9
+        dest: vendor/github.com/bahlo/generic-list-go/
+
+      - type: git
+        url: https://github.com/buger/jsonparser.git
+        tag: v1.1.2
+        commit: a69e7e01cd4ad67bdfd3ac2c080b9212af16f4b0
+        dest: vendor/github.com/buger/jsonparser/
+
+      - type: git
         url: https://github.com/davecgh/go-spew.git
-        tag: v1.1.0
+        tag: v1.1.1
+        commit: 152484fe5c9ff65d013f0f372d748c03e8749e6d
         dest: vendor/github.com/davecgh/go-spew/
 
       - type: git
         url: https://github.com/gorilla/websocket.git
-        tag: v1.5.0
+        tag: v1.5.3
+        commit: ce903f6d1d961af3a8602f2842c8b1c3fca58c4d
         dest: vendor/github.com/gorilla/websocket/
 
       - type: git
-        url: https://github.com/imdario/mergo.git
-        tag: v0.3.13
-        dest: vendor/github.com/imdario/mergo/
+        url: https://github.com/invopop/jsonschema.git
+        tag: v0.13.0
+        commit: 328cc73c3399c73df18b708fa00d29669cb0e4cc
+        dest: vendor/github.com/invopop/jsonschema/
 
       - type: git
         url: https://github.com/k0swe/wsjtx-go.git
-        tag: v4.0.1
+        tag: v4.2.1
+        commit: 48603cc518631805c0f748337cf71ffbc1ab9e51
         dest: vendor/github.com/k0swe/wsjtx-go/v4/
 
       - type: git
@@ -45,49 +69,80 @@ modules:
         dest: vendor/github.com/leemcloughlin/jdn/
 
       - type: git
+        url: https://github.com/mailru/easyjson.git
+        tag: v0.7.7
+        commit: c120ca7ced6051261161ce15e8f1542a4b2567fc
+        dest: vendor/github.com/mailru/easyjson/
+
+      - type: git
         url: https://github.com/mattn/go-colorable.git
-        tag: v0.1.12
+        tag: v0.1.14
+        commit: 1f71342c1ee78c126bcb69cd26ed8c2be7e016b3
         dest: vendor/github.com/mattn/go-colorable/
 
       - type: git
         url: https://github.com/mattn/go-isatty.git
-        tag: v0.0.14
+        tag: v0.0.21
+        commit: 4237fb15069af3284b50e5d91bcdd5403e584605
         dest: vendor/github.com/mattn/go-isatty/
 
       - type: git
         url: https://github.com/mazznoer/csscolorparser.git
-        tag: v0.1.2
+        tag: v0.1.8
+        commit: 953bce53f200236587d312a3afecf9afaf6b5548
         dest: vendor/github.com/mazznoer/csscolorparser/
 
       - type: git
         url: https://github.com/pmezard/go-difflib.git
         tag: v1.0.0
+        commit: c0b812dadcf4498dede02bb7f0c5c478be997e34
         dest: vendor/github.com/pmezard/go-difflib/
 
       - type: git
         url: https://github.com/rs/zerolog.git
-        tag: v1.27.0
+        tag: v1.35.0
+        commit: 13966551e7cc9f174723bddde692f0f0f9a833aa
         dest: vendor/github.com/rs/zerolog/
 
       - type: git
         url: https://github.com/stretchr/testify.git
-        tag: v1.7.2
+        tag: v1.11.1
+        commit: 2a57335dc9cd6833daa820bc94d9b40c26a7917d
         dest: vendor/github.com/stretchr/testify/
 
       - type: git
+        url: https://github.com/wk8/go-ordered-map.git
+        tag: v2.1.8
+        commit: 85ca4a2b29d3241fa4513f82be3d38fe2392a791
+        dest: vendor/github.com/wk8/go-ordered-map/v2/
+
+      - type: git
+        url: https://github.com/xylo04/goHamlib.git
+        commit: 30dd4ae13b3821025e0afdae55f6093d6f833ba5
+        dest: vendor/github.com/xylo04/goHamlib/
+
+      - type: git
         url: https://github.com/golang/sys.git
-        commit: 9f5ed59c137dcb0852024edd2e71af63c2d67707
+        tag: v0.41.0
+        commit: fc646e489fd944b6f77d327ab77f1a4bab81d5ad
         dest: vendor/golang.org/x/sys/
 
       - type: git
         url: https://github.com/go-yaml/yaml.git
         tag: v3.0.1
+        commit: f6f7691b1fdeb513f56608cd2c32c51f8194bf51
         dest: vendor/gopkg.in/yaml.v3/
 
       - type: git
+        url: https://github.com/Hamlib/Hamlib.git
+        tag: 4.6.2
+        commit: 70e54ac426d4d1dd1724bcb97150935c556d2bbb
+        dest: build/Hamlib-4.6.2/
+
+      - type: git
         url: https://github.com/k0swe/kel-agent.git
-        tag: v0.4.6
-        commit: ffda29af4045e543e55b25564d265af37f92fc41
+        tag: v1.0.0
+        commit: 897c45b578d44becae89deae52a18c86d13ea372
         x-checker-data:
           type: json
           url: https://api.github.com/repos/k0swe/kel-agent/releases/latest
@@ -95,14 +150,31 @@ modules:
           version-query: $tag | sub("^v"; "")
           timestamp-query: .published_at
 
-      - type: patch
-        path: appdata.patch
+      - type: file
+        path: metainfo-developer.patch
 
     buildsystem: simple
     build-commands:
+      - patch -p1 -i metainfo-developer.patch
       - cp assets/modules.txt vendor/
-      - make -j$FLATPAK_BUILDER_N_JOBS
+      - >-
+        sed -i '/AX_PROG_LUA/d;/AX_LUA_HEADERS/d;/AX_LUA_LIBS/d'
+        build/Hamlib-$(grep HAMLIB_VERSION versions.env | cut -d=
+        -f2)/configure.ac
+      - export ROOT_DIR=$PWD && ./scripts/hamlib.sh
+      - >-
+        export ROOT_DIR=$PWD && export GITCOMMIT=$(git rev-parse --short HEAD
+        2>/dev/null || true) && export VERSION=v$(grep KEL_AGENT_VERSION
+        versions.env | cut -d= -f2) && export TAGS=hamlib && export
+        PKG_CONFIG_PATH=$PWD/build/Hamlib-$(grep HAMLIB_VERSION versions.env |
+        cut -d= -f2)/prefix/usr/local/lib/pkgconfig && scripts/build.sh
+      - install -d /app/lib
+      - cp -a build/Hamlib-$(grep HAMLIB_VERSION versions.env | cut -d=
+        -f2)/prefix/usr/local/lib/libhamlib*.so* /app/lib/
       - install -D kel-agent /app/bin/kel-agent
-      - install -Dm644 assets/radio.k0swe.Kel_Agent.svg /app/share/icons/hicolor/scalable/apps/radio.k0swe.Kel_Agent.svg
-      - install -Dm644 assets/radio.k0swe.Kel_Agent.metainfo.xml /app/share/metainfo/radio.k0swe.Kel_Agent.metainfo.xml
-      - install -Dm644 assets/radio.k0swe.Kel_Agent.desktop /app/share/applications/radio.k0swe.Kel_Agent.desktop
+      - install -Dm644 assets/radio.k0swe.Kel_Agent.svg
+        /app/share/icons/hicolor/scalable/apps/radio.k0swe.Kel_Agent.svg
+      - install -Dm644 assets/radio.k0swe.Kel_Agent.metainfo.xml
+        /app/share/metainfo/radio.k0swe.Kel_Agent.metainfo.xml
+      - install -Dm644 assets/radio.k0swe.Kel_Agent.desktop
+        /app/share/applications/radio.k0swe.Kel_Agent.desktop
